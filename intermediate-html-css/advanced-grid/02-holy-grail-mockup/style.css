@@ -1,7 +1,11 @@
 * {
   margin: 0;
   padding: 0;
-  outline: 1px solid red;
+}
+
+body
+{
+  height: 100vh;
 }
 
 .container {
@@ -25,7 +29,16 @@
   display: grid;
   grid-template: 1fr / subgrid;
   align-items: center;
-  justify-content: start;
+}
+
+.header .logo
+{
+  justify-self: start;
+}
+
+ul
+{
+  list-style: none;
 }
 
 .menu ul,
@@ -33,21 +46,27 @@
   font-size: 16px;
 }
 
-menu li
-{
-  text-decoration: none;
-}
-
 .menu ul
 {
   display: grid;
   grid-template: 1fr / repeat(4, 1fr);
-  place-items: center;
+  align-items: center;
+  justify-items: center;
+  justify-items: center;
 }
 
 .sidebar {
   background-color: #C50208;
   grid-area: 2 / 1 / 4 / 2;
+  display: grid;
+  grid-template: repeat(4, 1fr) / 1fr;
+  gap: 50px;
+}
+
+.sidebar > *
+{
+  display: grid;
+  place-items: center;
 }
 
 .sidebar .photo {
@@ -57,7 +76,6 @@ menu li
   font-weight: normal;
   border-radius: 10px;
 }
-
 
 .sidebar .side-content {
   background-color: white;
@@ -69,6 +87,12 @@ menu li
 .nav {
   background-color: #C50208;
   grid-area: 2 / 2 / 3 / 3;
+}
+
+.nav ul
+{
+  display: grid;  
+  grid-template: 1fr / repeat(3, 1fr);
 }
 
 .nav ul li {
